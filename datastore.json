@@ -1,0 +1,291 @@
+[
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15956375363771,
+        12.97294234015781
+      ]
+    },
+    "_id": "67f6ef3aa4bf75119fcf4ced",
+    "item": "Home Essiantials",
+    "description": "Rice",
+    "image": "/uploads/1744236346120.png",
+    "username": "Goutam",
+    "email": "Goutam123@gmail.com",
+    "createdAt": "2025-04-09T22:05:46.140Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15956375363771,
+        12.97294234015781
+      ]
+    },
+    "_id": "67f6ef50a4bf75119fcf4cef",
+    "item": "Groceries",
+    "description": "Tomatoes",
+    "image": "/uploads/1744236368353.png",
+    "username": "Goutam",
+    "email": "Goutam123@gmail.com",
+    "createdAt": "2025-04-09T22:06:08.360Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15956375363771,
+        12.97294234015781
+      ]
+    },
+    "_id": "67f6ef69a4bf75119fcf4cf1",
+    "item": "Groceries",
+    "description": "Mixed Veggie",
+    "image": "/uploads/1744236393552.png",
+    "username": "Goutam",
+    "email": "Goutam123@gmail.com",
+    "createdAt": "2025-04-09T22:06:33.558Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15956375363771,
+        12.97294234015781
+      ]
+    },
+    "_id": "67f6ef8ca4bf75119fcf4cf3",
+    "item": "Groceries",
+    "description": "Beans",
+    "image": "/uploads/1744236428069.png",
+    "username": "Goutam",
+    "email": "Goutam123@gmail.com",
+    "createdAt": "2025-04-09T22:07:08.074Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15956375363771,
+        12.97294234015781
+      ]
+    },
+    "_id": "67f6efa2a4bf75119fcf4cf5",
+    "item": "Groceries",
+    "description": "Peach",
+    "image": "/uploads/1744236450924.png",
+    "username": "Goutam",
+    "email": "Goutam123@gmail.com",
+    "createdAt": "2025-04-09T22:07:30.929Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.1595410197406,
+        12.973021767836908
+      ]
+    },
+    "_id": "67f6f022a4bf75119fcf4cfc",
+    "item": "Groceries",
+    "description": "Spinech",
+    "image": "/uploads/1744236578122.png",
+    "username": "Raj",
+    "email": "Raj123@hotmail.com",
+    "createdAt": "2025-04-09T22:09:38.129Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.1595410197406,
+        12.973021767836908
+      ]
+    },
+    "_id": "67f6f03aa4bf75119fcf4cfe",
+    "item": "Groceries",
+    "description": "Basket Of ALL",
+    "image": "/uploads/1744236602829.png",
+    "username": "Raj",
+    "email": "Raj123@hotmail.com",
+    "createdAt": "2025-04-09T22:10:02.833Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.1595410197406,
+        12.973021767836908
+      ]
+    },
+    "_id": "67f6f04ea4bf75119fcf4d00",
+    "item": "Groceries",
+    "description": "Veggies",
+    "image": "/uploads/1744236622449.png",
+    "username": "Raj",
+    "email": "Raj123@hotmail.com",
+    "createdAt": "2025-04-09T22:10:22.453Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15959872946928,
+        12.97291526160191
+      ]
+    },
+    "_id": "67f6f091a4bf75119fcf4d03",
+    "item": "Cosmetics",
+    "description": "Blusher",
+    "image": "/uploads/1744236689294.png",
+    "username": "Varnika",
+    "email": "varnika12@gmail.com",
+    "createdAt": "2025-04-09T22:11:29.296Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15959872946928,
+        12.97291526160191
+      ]
+    },
+    "_id": "67f6f0a4a4bf75119fcf4d05",
+    "item": "Cosmetics",
+    "description": "Cocooil",
+    "image": "/uploads/1744236708681.png",
+    "username": "Varnika",
+    "email": "varnika12@gmail.com",
+    "createdAt": "2025-04-09T22:11:48.684Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15959872946928,
+        12.97291526160191
+      ]
+    },
+    "_id": "67f6f0b6a4bf75119fcf4d07",
+    "item": "Cosmetics",
+    "description": "Serum",
+    "image": "/uploads/1744236726345.png",
+    "username": "Varnika",
+    "email": "varnika12@gmail.com",
+    "createdAt": "2025-04-09T22:12:06.347Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15959872946928,
+        12.97291526160191
+      ]
+    },
+    "_id": "67f6f0cba4bf75119fcf4d09",
+    "item": "Cosmetics",
+    "description": "Toner",
+    "image": "/uploads/1744236747947.png",
+    "username": "Varnika",
+    "email": "varnika12@gmail.com",
+    "createdAt": "2025-04-09T22:12:27.954Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15955183769324,
+        12.972967032038877
+      ]
+    },
+    "_id": "67f6f2f45abc5cd0db1404de",
+    "item": "Home Essiantials",
+    "description": "Honey",
+    "image": "/uploads/1744237300900.png",
+    "username": "Goutam",
+    "email": "Goutam123@gmail.com",
+    "createdAt": "2025-04-09T22:21:40.914Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15955183769324,
+        12.972967032038877
+      ]
+    },
+    "_id": "67f6f3155abc5cd0db1404e0",
+    "item": "Home Essiantials",
+    "description": "Spices",
+    "image": "/uploads/1744237333992.png",
+    "username": "Goutam",
+    "email": "Goutam123@gmail.com",
+    "createdAt": "2025-04-09T22:22:13.998Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.15955183769324,
+        12.972967032038877
+      ]
+    },
+    "_id": "67f6f32d5abc5cd0db1404e2",
+    "item": "Home Essiantials",
+    "description": "Olive Oil",
+    "image": "/uploads/1744237357104.png",
+    "username": "Goutam",
+    "email": "Goutam123@gmail.com",
+    "createdAt": "2025-04-09T22:22:37.108Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.16374947130686,
+        12.97126246023973
+      ]
+    },
+    "_id": "67f7832c100a5e90960f4588",
+    "item": "Home Essiantials",
+    "description": "Blusher",
+    "image": "/uploads/1744274220659.png",
+    "username": "Goutam",
+    "email": "Goutam123@gmail.com",
+    "createdAt": "2025-04-10T08:37:00.675Z",
+    "__v": 0
+  },
+  {
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        79.16374157627641,
+        12.971264024381703
+      ]
+    },
+    "_id": "67f7878a81e533eb74b1da7e",
+    "item": "Groceries",
+    "description": "Sugar",
+    "image": "/uploads/1744275338030.png",
+    "username": "Vedansh",
+    "email": "Raj123@hotmail.com",
+    "createdAt": "2025-04-10T08:55:38.120Z",
+    "__v": 0
+  }
+]

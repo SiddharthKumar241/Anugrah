@@ -1,0 +1,472 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('coverimage.jpeg') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Overlay with 50% Opacity */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    /* background: rgba(51, 51, 51, 0.9); */
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+/* Navbar Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 18px;
+    margin-right: 45px;
+}
+
+.nav-buttons button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#logop {
+    width: 180px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in-out;
+
+    /* Continuous smooth flipping */
+    animation: flipLogo 4s linear infinite;
+}
+
+#logop:hover {
+    opacity: 1;
+    animation: none; /* Stops the rotation */
+    transform: rotate(0deg);
+}
+
+/* Continuous Forward-Backward Rotation */
+@keyframes flipLogo {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+/* Login & Sign Up Buttons */
+.logup-btn {
+    background: #B9B28A;
+}
+
+.logup-btn:hover {
+    background: #BF360C;
+    transform: scale(1.1);
+}
+
+.login-btn {
+    background: #B9B28A;
+}
+
+.login-btn:hover {
+    background: #1B5E20;
+    transform: scale(1.1);
+}
+
+.logout-btn {
+    background: #B9B28A;
+    transition: 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background: #B71C1C; 
+    transform: scale(1.1);
+}
+
+.about-btn {
+    background: #B9B28A;
+    transition: all 0.3s ease-in-out;
+}
+
+.about-btn:hover {
+    background: #9EDDFF;
+    transform: scale(1.1);
+}
+
+/* About Us Popup */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* Space between images */
+    flex-wrap: wrap;
+    /* Ensures responsiveness */
+    margin-top: 10px;
+}
+
+.about-person {
+    text-align: center;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 150px;
+    /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust the popup width for About Us */
+#aboutPopup {
+    width: 450px;
+}
+
+/* Responsive Design for About Us */
+@media (max-width: 600px) {
+    .about-content {
+        flex-direction: column;
+        /* Stack images vertically on small screens */
+    }
+
+    #aboutPopup {
+        width: 90%;
+    }
+}
+
+.motto-btn {
+    background: #B9B28A;
+    transition: all 0.3s ease-in-out;
+}
+
+.motto-btn:hover {
+    background: #FFD600;
+    /* A yellow shade */
+    transform: scale(1.1);
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Floating Title Animation */
+.title {
+    position: relative;
+    font-size: 40px;
+    color: whitesmoke;
+    /* Grey text for a modern look */
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    /* More spacing between letters */
+    line-height: 1.5;
+    /* Space between lines */
+
+    animation: clip-path-reveal-1 5s ease-in-out infinite alternate;
+    /* Slowed down */
+}
+
+.title span {
+    display: inline-block;
+    opacity: 0;
+    transform: rotateY(360deg) scale(0.5);
+    /* Starts fully rotated and smaller */
+    animation: flipAppear 2s forwards ease-in-out, line-animation 8s ease-in-out infinite alternate;
+    /* Slower */
+    animation-delay: calc(0.4s * var(--i));
+    /* Increased delay per letter */
+    padding: 5px;
+
+}
+
+@keyframes flipAppear {
+    0% {
+        opacity: 0;
+        transform: rotateY(360deg) scale(0.5);
+    }
+
+    40% {
+        opacity: 0.5;
+        transform: rotateY(180deg) scale(1.1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: rotateY(0deg) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg) scale(1);
+    }
+}
+
+@keyframes line-animation {
+    0% {
+        transform: scaleX(0);
+    }
+
+    20% {
+        transform: scaleX(0);
+    }
+
+    30%,
+    40% {
+        transform: scaleX(1);
+        top: calc(100% - 2px);
+    }
+
+    70% {
+        transform: scaleX(1);
+        top: 0px;
+    }
+
+    90%,
+    100% {
+        transform: scaleX(0.2);
+        top: 0px;
+    }
+}
+
+@keyframes clip-path-reveal-1 {
+
+    0%,
+    35% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    60% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+
+@keyframes colorFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes floatTitle {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 215, 0, 0.8), 0 0 10px rgba(255, 69, 0, 0.8), 0 0 15px rgba(0, 255, 255, 0.8);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 0, 1), 0 0 15px rgba(255, 69, 0, 1), 0 0 20px rgba(0, 255, 255, 1);
+    }
+}
+
+.buttons-act {
+    display: none;
+}
+
+.logged-in .buttons-act {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Adds space between buttons */
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    background: #F57F17; /* Default background */
+    display: inline-block; /* Ensures the hover effect applies correctly */
+}
+
+/* Specific Button Colors */
+.donor-btn {
+    background: #F57F17; /* Orange */
+}
+
+.receiver-btn {
+    background: #2E7D32; /* Green */
+}
+
+/* Hover & Focus Effects */
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1); /* Smooth pop-up effect */
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+    opacity: 0.9;
+}
+
+/* Click Effect */
+.btn:active {
+    transform: scale(1.15); /* Slightly larger when clicked */
+    box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #FFF8E1;
+    padding: 2rem;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    z-index: 1000;
+    opacity: 0;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.popup input {
+    width: 90%; 
+    padding: 0.7rem;
+    margin: 0.5rem auto; 
+    border: 2px solid #F57F17;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+}
+
+.popup button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #F57F17;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.popup button:hover {
+    background: #E65100;
+    transform: scale(1.05);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.9em;
+    backdrop-filter: blur(5px);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-buttons {
+        margin-top: 10px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .footer {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+}

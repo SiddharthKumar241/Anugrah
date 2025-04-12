@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donate</title>
+    <link rel="stylesheet" href="./donation.css">
+    <link rel="shortcut icon" href="./donor.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <button class="back-btn" onclick="history.back()">Back</button>
+    <button class="logout-btn">Logout</button>
+
+
+    <h1>Donate</h1>
+    <form action="/donor" method="POST" enctype="multipart/form-data" id="donationForm">
+        <label for="item">Item Type:</label>
+        <input type="text" name="item" id="item" required>
+
+        <label for="description">Item Description:</label>
+        <textarea name="description" id="description"></textarea>
+
+
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" id="image">
+
+
+        <p id="locationStatus">Fetching your location...</p>
+        <button type="button" id="getLocationBtn">Refresh Location</button>
+
+        <button type="submit">Donate</button>
+    </form>
+    <p id="responseMessage" style="text-align: center; font-weight: bold;"></p>
+    <script>
+
+        function setLocation(position) {
+            document.getElementById('latitude').value = position.coords.latitude;
+            document.getElementById('longitude').value = position.coords.longitude;
+            document.getElementById('locationStatus').textContent = "Location acquired.";
+        }
+
+        function handleLocationError(error) {
+            document.getElementById('locationStatus').textContent = "Error retrieving location. Please allow location access and try again.";
+        }
+
+        function requestLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(setLocation, handleLocationError);
+            } else {
+                document.getElementById('locationStatus').textContent = "Geolocation is not supported by this browser.";
+            }
+        }
+        window.addEventListener('load', requestLocation);
+
+        document.getElementById('getLocationBtn').addEventListener('click', requestLocation);
+
+        document.getElementById("donationForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!document.getElementById("latitude").value || !document.getElementById("longitude").value) {
+                alert("Please allow location access before submitting.");
+                return;
+            }
+
+            const formData = new FormData(this);
+            fetch("/donor", {
+                method: "POST",
+                body: formData,
+            })
+                .then(response => response.text())
+                .then(message => {
+                    alert(message);
+                    document.getElementById("responseMessage").textContent = message;
+
+                    if (message.includes("success")) {
+                        document.getElementById("donationForm").reset();
+                    }
+                })
+                .catch(error => {
+                    alert("Something went wrong! Please try again.");
+                });
+        });
+
+        function logout() {
+    fetch("/logout")
+        .then(res => {
+            if (res.ok) {
+                localStorage.removeItem("loggedIn");
+                alert("You have been logged out.");
+                window.location.href = "home.html";
+            } else {
+                alert("Logout failed.");
+            }
+        })
+        .catch(err => {
+            console.error("Logout error:", err);
+            alert("An error occurred during logout.");
+        });
+}
+
+
+        function checkAuth() {
+            const isLoggedIn = localStorage.getItem("loggedIn");
+            if (isLoggedIn) {
+                document.querySelector(".logout-btn").style.display = "block";
+            } else {
+                document.querySelector(".logout-btn").style.display = "none";
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            checkAuth();
+            document.querySelector(".logout-btn").addEventListener("click", logout);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Receive</title>
+    <link rel="stylesheet" href="./receiver.css">
+    <link rel="shortcut icon" href="./receiver.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <button class="back-btn" onclick="window.location.href='home.html'">Back</button>
+    <button class="logout-btn">Logout</button>
+    <button onclick="window.location.href='sendEmail.html'" style="
+    background-color: #50C878;
+    color: #ffffff;
+    border: 2px solid #3A9D60;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;"
+        onmouseover="this.style.backgroundColor='#3A9D60'; this.style.borderColor='#2F7A4C'; this.style.transform='translateY(-2px)'"
+        onmouseout="this.style.backgroundColor='#50C878'; this.style.borderColor='#3A9D60'; this.style.transform='translateY(0)'"
+        onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='translateY(0)'">Send Email to
+        Donor</button>
+
+
+
+    <h1>Receive</h1>
+    <form action="/receiver" method="POST" id="receiverForm">
+        <label for="itemNeeded">Item Needed:</label>
+        <input type="text" name="itemNeeded" id="itemNeeded" required>
+
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+
+        <p id="locationStatus">Fetching your location...</p>
+        <button type="button" id="getLocationBtn">Refresh Location</button>
+        <button type="submit">Find Donors</button>
+    </form>
+
+    <div id="results"></div>
+
+    <div id="results"></div>
+    <div id="custom-alert" class="alert-box">
+        <p>Your selection is recorded and sent to the donor. Come in 5 minutes to collect your parcel.</p>
+        <button id="close-alert">OK</button>
+    </div>
+
+    <div id="donation-results"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./receiver.js"></script>
+    <script src="./fetchDonations.js"></script>
+
+
+</body>
+
+</html>
