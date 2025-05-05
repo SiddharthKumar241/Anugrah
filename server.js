@@ -265,7 +265,18 @@ app.post("/send-email", async (req, res) => {
 
 
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server running at: http://localhost:${PORT}`);
+mongoose.connect('mongodb+srv://kumarsiddharth166:DarkSister@clusterone.bqlr6.mongodb.net/foodDonation?retryWrites=true&w=majority&appName=ClusterOne', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => {
+    console.log("✅ Connected to MongoDB");
+    
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`🚀 Server running at: http://localhost:${PORT}`);
+    });
+})
+.catch(err => {
+    console.error("❌ MongoDB connection error:", err);
 });
