@@ -18,12 +18,18 @@ const transporter = nodemailer.createTransport({
 
 
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb://localhost:27017/foodDonation", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(() => console.log("Connected to MongoDB"))
-.catch(err => console.error("MongoDB connection error:", err));
+ mongoose.connect('mongodb+srv://kumarsiddharth166:DarkSister@clusterone.bqlr6.mongodb.net/foodDonation?retryWrites=true&w=majority&appName=ClusterOne', {
+     useNewUrlParser: true,
+     useUnifiedTopology: true
+ }).then(() => console.log("Connected to MongoDB"))
+ .catch(err => console.error("MongoDB connection error:", err));
+
+//  mongoose.connect("mongodb://localhost:27017/foodDonation", {
+//      useNewUrlParser: true,
+//      useUnifiedTopology: true
+//  }).then(() => console.log("Connected to MongoDB"))
+//  .catch(err => console.error("MongoDB connection error:", err));
+
 
 const donationSchema = new mongoose.Schema({
     item: String,
