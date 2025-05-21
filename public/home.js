@@ -63,7 +63,7 @@ $(document).ready(function () {
         }
 
         if (!validateName(name)) {
-            alert("Enter a valid name(Only Strings Patterns Allowed)");
+            alert("Enter a valid name(Enter Yr Name Without Space and use '_' as a seperator)");
             return;
         }
 
